@@ -1,0 +1,116 @@
+.utility-nav {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    background: $dkblue;
+    top: 0;
+    width: calc(100% - 60px);
+    z-index: 99;
+    height: 46px;
+    padding: 5px 30px;
+    @include respond(phone) {
+        gap: 15px;
+        width: calc(100% - 30px);
+        padding: 0 15px;
+    }
+    a {
+        font-size: 16px !important;
+        color: $white !important;
+        //text-transform: uppercase !important;
+        font-family: $pt_serif !important;
+        text-decoration: none !important;
+        font-weight: $normal !important;
+        @include respond(phone) {
+            font-size: 9.8px !important;
+            line-height: 115% !important;
+        }
+        &:hover {
+            color: $white !important;
+            text-decoration: underline !important;
+        }
+    }
+    .utility-cta {
+        .btn {
+            border: 2px $white solid;
+            padding: 10px 15px;
+        }
+    }
+    .social-links {
+        display: flex;
+        gap: 0px;
+        @include respond(phone) {
+            gap: 5px;   
+        }
+        a {
+            @include respond(phone) {
+                width: auto !important;
+                height: auto !important;
+            }
+            &:hover {
+                text-decoration: none !important;
+                span {
+                    background-color: $blk !important;
+                    &:before {
+                        color: $white !important;
+                    }
+                }
+            }
+            span {
+                transition: $trans;
+                background-color: $white !important;
+                font-size: 25px !important;
+                border-radius: 50% !important;
+                &:before {
+                    color: $dkblue !important;
+                }
+            }
+        }
+    }
+}
+
+header {
+    position: fixed;
+    top:0;
+    width: 100%;
+    z-index: 50;
+    display:flex;
+    height:115px;
+    transition: $trans;
+    top: 46px !important;
+    #header-top {
+        display: flex;
+        justify-content: space-between;
+        max-width: 94%;
+        width: 100%;
+        align-items: center;
+        padding: 0 !important;
+        
+        &_left {
+            display: flex;
+            width: 25%;
+            justify-content: flex-start;
+
+            .custom-logo-link {
+                width: 100%;
+                height: auto;
+                display:flex;
+
+                .custom-logo {
+                    max-height: 60px;
+                    max-width: 340px;
+                    width: 100%;
+
+                    @include respond(phone) {
+                        max-width: 250px;
+                    }
+                }
+            }
+            
+            @include respond(tab-land) {
+                width: 100%;
+            }
+        }
+    }
+}

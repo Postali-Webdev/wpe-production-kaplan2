@@ -1,0 +1,36 @@
+footer {
+    .footer {
+        background: $white !important;
+        p, li, a, span {
+            color: $blk !important;
+        }
+        .btn {
+            background: $green !important;
+            color: $white !important;
+            border: solid 3px $green !important;
+            transition: $trans;
+            &:hover {
+                background: $white !important;
+                color: $blk !important;
+            }
+        }
+        .container .columns {
+            a.social-link {
+                text-decoration: none !important;
+                span {
+                    background-color: $blk !important;
+        
+                    &:before {
+                        color: $white !important;
+                    }
+                }
+                &:hover {
+                    span {
+                        background-color: $green !important;
+                    }
+                }
+            }
+        }
+
+    }
+}

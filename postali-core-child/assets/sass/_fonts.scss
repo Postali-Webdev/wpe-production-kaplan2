@@ -1,0 +1,170 @@
+/**
+ * Web Font Styles, H Styles, Body Text Styles
+ *
+ * @package Postali Child
+ * @author Postali LLC
+**/
+
+/* Fonts */
+
+ul li, ol li {
+    margin: 0 0 0 20px;
+    font-size: 18px;
+}
+
+select, option {
+    font-family: $pt_serif !important;
+}
+
+a:not(.btn) {
+    text-decoration:none;
+    transition:$trans;
+    font-family: $noto !important;
+    color: $seafoam !important;
+    text-decoration: underline;
+    &:hover {
+        color: $blk !important;
+        text-decoration: underline;
+    }
+}
+
+.btn {
+    display:inline-block;
+    padding:15px 35px;
+    text-decoration:none;
+    transition:$trans;
+    font-size: 16px;
+    text-decoration: none !important;
+    font-weight: $bold;
+    font-family: $noto !important;
+
+}
+
+p {
+    font-size:18px;
+    line-height: 150%;
+    margin-bottom:30px;
+    margin-top: 0;
+    font-family: $pt_serif !important;
+    &.small {
+        font-size: 14px !important;
+    }
+
+    &.large {
+        font-size: 22px;
+    }
+
+    &.green {
+        color:$seafoam !important;
+    }
+    
+    a {
+        font-family: $pt_serif !important;
+        color:inherit;
+        text-decoration: underline;
+
+        &:hover {
+            text-decoration: inherit;
+        }
+    }
+}
+
+.banner h1, h1 {
+    font-family: $noto !important;
+    //text-transform: uppercase !important;
+    @include respond(tab-port) {
+        font-size: 40px !important
+    }
+    @include respond(phone) {
+        font-size: 35px !important
+    }
+}
+
+h2, h3, h4 {
+    line-height: 120%;
+    font-family: $noto !important;
+}
+
+h2 {
+    margin: 0px 0 20px !important;
+    display:block;
+    font-size: 45px !important;
+    color: $dkblue !important;
+    @include respond(phone) {
+        font-size: 35px !important;
+    }
+}
+
+h3 {
+    margin: 30px 0 20px !important;
+    display:block;
+    font-size: 32px !important;
+    color: $green !important;
+    @include respond(phone) {
+        font-size: 28px !important;
+    }
+}
+
+h2, h3 {
+    //text-transform: uppercase !important;
+}
+
+h4 {
+    margin: 30px 0 20px !important;
+    display:block;
+    font-size: 22px;
+}
+
+.body-container {
+    ul li, 
+    ul li a,
+    ol li,
+    ol li a {
+        font-size:16px;
+        line-height: 30px;
+        margin-top: 0;
+        font-family: $pt_serif !important;
+        color: inherit;
+        margin:0 !important;
+    }
+
+    ul, ol {
+        margin-bottom:30px;
+        margin-left: 30px;
+        li {
+            &::marker {
+                color: $green !important;
+                font-weight: $bold;
+            }
+            a {
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    p {
+        a {
+            text-decoration: none !important;
+
+            &:hover {
+                text-decoration: underline !important;
+            }
+        }
+    }
+}
+
+p.subtitle {
+    font-style: italic;
+    color: $dkblue !important;
+    margin-bottom: 10px;
+    font-family: $noto !important;
+    font-size: 18px;
+}
+
+a.highlight {
+    color: $blk !important;
+    background: #52ab985c;
+    padding: 3px;
+}
