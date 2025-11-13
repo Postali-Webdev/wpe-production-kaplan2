@@ -33,6 +33,7 @@
                 </div>
                 <div class="column-20 block menu">
                     <p><strong>Site Navigation</strong></p>
+                    <nav role="navigation">
                     <?php
                         $args = array(
                             'container' => false,
@@ -40,6 +41,7 @@
                         );
                         wp_nav_menu( $args );
                     ?>	
+                    </nav>
                 </div>
                 <div class="spacer-60"></div>
                 <div class="footer-social">
