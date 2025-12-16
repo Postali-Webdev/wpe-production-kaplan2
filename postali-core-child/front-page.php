@@ -100,6 +100,18 @@ get_header();?>
                     <?php endwhile; ?>
                 </div>
                 <?php endif; ?>
+                <div class="spacer-15"></div>
+                <div style="display: flex; align-items: center; justify-content: center; gap: 20px; width: 100%;">
+                    <?php if( have_rows('intro_badges') ) : ?>
+                    <?php while( have_rows('intro_badges') ) : the_row(); $interior_link = get_sub_field('page'); ?>
+                        <?php 
+                        $image = get_sub_field('badge');
+                        if( !empty( $image ) ): ?>
+                            <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                        <?php endif; ?>
+                    <?php endwhile; ?>
+                    <?php endif; ?>
+                </div>
             </div>
         </div>
     </div>
